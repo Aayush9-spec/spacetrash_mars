@@ -1,250 +1,237 @@
-# 🚀 SpaceTrash Recycling Simulator
-### NASA Space Apps Challenge 2025 - Noida
+🚀 SpaceTrash Recycling Simulator
+NASA Space Apps Challenge 2025 - Noida
 
-> **Transform Mars mission waste into life-sustaining resources**
+Transform Mars mission waste into life-sustaining resources
+An interactive recycling simulator that demonstrates how astronauts can convert space mission waste into essential survival materials — with a dual-mode operation to also showcase real-world Earth impact.
 
-A cutting-edge recycling simulator that demonstrates how astronauts can convert space mission waste into essential survival resources, with dual-mode operation for both Mars missions and Earth environmental impact analysis.
+🌟 Features
+🕐 Timeline of Waste Recycling
 
-![SpaceTrash Banner](https://images.unsplash.com/photo-1564053844-e1aa2c0e8c0d?w=1200&h=400&fit=crop)
+Real-time tracking of recycling actions
 
-## 🌟 Features Overview
+Line charts showing cumulative waste processed
 
-### 🕐 **1. Timeline of Waste Recycling**
-- **Real-time tracking** of recycling actions with timestamps
-- **Interactive line charts** showing cumulative waste processed over time
-- **Filter by waste type** (Plastic, Metal, Textile, E-Waste)
-- **Historical analysis** with detailed activity logs
-- **Data persistence** with Supabase backend
+Filters by waste type (Plastic, Metal, Textile, E-Waste)
 
-### 🛠️ **2. Astronaut Resource Tracker**
-- **Visual inventory system** with icons and real-time counts
-- **Conversion tracking**: Filament → Tools, Metal → Construction Parts
-- **Resource utilization** monitoring with progress bars
-- **Capacity management** with usage alerts
-- **Mars habitat integration** for survival planning
+Activity logs with timestamps
 
-### 🌍 **3. Earth Impact Mode**
-- **Dual-mode toggle** between Mars Mission and Earth Impact
-- **Environmental metrics**: Bottles saved, CO₂ avoided, Water conserved
-- **Impact visualization** with icons and graphs
-- **Real-time calculations** based on waste processed
-- **Educational component** for sustainability awareness
+Persistent storage via Supabase
 
-### 🤖 **4. AI-Based Waste Sorting Simulation**
-- **Image upload** for waste classification (JPG/PNG support)
-- **Simulated AI prediction** with confidence scoring
-- **TensorFlow.js-style** classification simulation
-- **Processing suggestions** for optimal recycling
-- **Automatic integration** with main recycling system
+🛠️ Astronaut Resource Tracker
 
-### 👨‍🚀 **5. Crew Survival Dashboard**
-- **Survival scoring system** with four key metrics
-- **Progress tracking**: Maintenance, Habitat Safety, Energy, Construction
-- **Alert system** for critical resource shortages
-- **Radial charts** for visual progress monitoring
-- **Mission status indicators** with color-coded alerts
+Visual inventory with icons & real-time counts
 
-### 📊 **6. Reset & Export Features**
-- **CSV export** with complete recycling history
-- **JSON export** for technical analysis
-- **Simulation reset** with confirmation dialogs
-- **Data management** with timestamp tracking
-- **Backup functionality** for mission planning
+Conversion tracking (Filament → Tools, Metal → Construction Parts)
 
-## 🚀 Quick Start
+Progress bars for resource usage
 
-### Prerequisites
-- Node.js 18+ 
-- Modern web browser (Chrome 90+, Firefox 88+, Safari 14+)
+Habitat integration for mission survival
 
-### Installation
-```bash
-# Clone the repository
-git clone https://github.com/your-team/spacetrash-simulator.git
-cd spacetrash-simulator
+🌍 Earth Impact Mode
 
-# Install dependencies
+Toggle between Mars and Earth simulation
+
+Metrics: bottles saved, CO₂ avoided, water conserved
+
+Impact visualization with graphs & icons
+
+Educational sustainability awareness
+
+🤖 AI-Based Waste Sorting
+
+Upload waste images (JPG/PNG)
+
+Simulated AI classification with confidence score
+
+TensorFlow.js-style model integration
+
+Suggestions for optimal recycling flow
+
+👨‍🚀 Crew Survival Dashboard
+
+Survival scores: Maintenance, Habitat Safety, Energy, Construction
+
+Radial charts for mission progress
+
+Alerts for critical shortages
+
+Color-coded mission status
+
+📊 Reset & Export
+
+Export recycling history as CSV/JSON
+
+Reset simulations with confirmation
+
+Backup mission data
+
+🎯 Mission Objectives
+Mars Mission Mode
+
+Convert waste into tools, insulation, energy, and construction materials
+
+Ensure astronaut survival with efficient recycling
+
+Track safety and mission readiness
+
+Earth Impact Mode
+
+Show real-world recycling benefits
+
+Track emissions avoided, water conserved, and resources saved
+
+Inspire awareness and promote circular economy
+
+📊 Waste Conversion Rates
+Waste Type	Conversion Rate	Output	Astronaut Benefit	Earth Impact
+Plastic	50%	3D Printer Filament	5 Tools/kg	20 Bottles Saved
+Metal	70%	Metal Sheets	1 Part/kg	2.5kg CO₂ Avoided
+Textile	80%	Insulation	1 Panel/kg	2,700L Water Saved
+E-Waste	30%	Metals + Syngas	10 Energy Units/kg	5 Devices Recycled
+🛠️ Technology Stack
+Frontend
+
+React 18 + TypeScript
+
+Vite for fast builds
+
+TailwindCSS with Mars-inspired theme
+
+Recharts for data visualization
+
+Lucide Icons for UI
+
+Backend
+
+Supabase (PostgreSQL + Auth + Storage)
+
+Database triggers for calculations
+
+Row Level Security for protection
+
+Libraries
+
+React Router, React Hook Form, TanStack Query
+
+Date-fns for time handling
+
+Sonner for toast notifications
+
+🌌 Design System
+/* Mars Habitat Palette */
+--mars-surface: 14 85% 8%;     
+--mars-sunset: 14 100% 45%;    
+--cosmic-blue: 220 100% 60%;   
+--stellar-purple: 280 85% 55%; 
+--space-void: 240 100% 3%;     
+
+
+Glow + floating animations for interactivity
+
+Smooth transitions for processing
+
+Mission-status alerts with color codes
+
+🚀 Quick Start
+Prerequisites
+
+Node.js 18+
+
+Modern browser (Chrome/Firefox/Safari latest)
+
+Installation
+git clone https://github.com/Aayush9-spec/spacetrash_mars.git
+cd spacetrash_mars
 npm install
-
-# Start development server
 npm run dev
-```
 
-### Environment Setup
-The app uses Supabase for backend services. Configuration is automatic through integrated setup.
+Environment
 
-## 🎮 How to Use
+Supabase powers backend (DB + Auth + Storage).
 
-### 1. **Start Recycling**
-- Navigate to the **Simulator** page
-- Select waste type (Plastic, Metal, Textile, E-Waste)
-- Enter quantity in kilograms
-- Click "Process Waste" to convert to resources
+Configure your project keys in .env.local.
 
-### 2. **Track Progress**
-- Visit **Dashboard** for overview analytics
-- Check **Timeline** for historical data
-- Monitor **Resources** for inventory status
-- Review **Survival** dashboard for mission readiness
+🎮 How to Use
 
-### 3. **Switch Modes**
-- Use the **Earth Impact Toggle** to switch between:
-  - **Mars Mission Mode**: Focus on astronaut survival
-  - **Earth Impact Mode**: Environmental sustainability metrics
+Simulator → Select waste type & enter kg → click Process Waste.
 
-### 4. **AI Waste Sorting**
-- Upload waste images in the **Simulator**
-- Get AI-powered classification suggestions
-- Review confidence scores and processing tips
-- Automatically add detected waste to system
+Dashboard → View analytics of waste recycled and outputs created.
 
-### 5. **Export Data**
-- Use **Export** buttons for CSV or JSON format
-- Download complete recycling history
-- Reset simulation when starting new missions
+Timeline → Review history of actions over mission duration.
 
-## 🛠️ Technology Stack
+Resources → Track inventory & astronaut benefits.
 
-### Frontend
-- **React 18** with TypeScript for type safety
-- **Vite** for fast development and building
-- **Tailwind CSS** with custom Mars-themed design system
-- **Lucide React** for beautiful space-themed icons
-- **Recharts** for interactive data visualizations
+Survival Dashboard → Monitor crew readiness metrics.
 
-### Backend
-- **Supabase** for database and real-time features
-- **PostgreSQL** with advanced JSONB storage
-- **Database triggers** for automatic calculations
-- **Row Level Security** for data protection
+Earth Impact Mode → Toggle to see global sustainability impact.
 
-### Key Libraries
-- **React Router** for navigation
-- **React Hook Form** for form management
-- **Date-fns** for time handling
-- **Sonner** for toast notifications
-- **TanStack Query** for data fetching
+AI Sorting → Upload waste images for classification.
 
-## 🌌 Design System
+Export/Reset → Save or reset mission data.
 
-### Mars Habitat Theme
-```css
-/* Color Palette */
---mars-surface: 14 85% 8%     /* Deep reddish brown */
---mars-sunset: 14 100% 45%    /* Bright orange-red */
---cosmic-blue: 220 100% 60%   /* Deep space blue */
---stellar-purple: 280 85% 55% /* Nebula purple */
---space-void: 240 100% 3%     /* Deep space black */
-```
+🏆 NASA Space Apps Challenge
+Categories
 
-### Animation System
-- **Glow effects** for interactive elements
-- **Floating animations** for visual appeal
-- **Smooth transitions** for professional feel
-- **Loading animations** for processing feedback
+Space Technology Innovation
 
-## 📊 Waste Conversion Rates
+Sustainability & Earth Impact
 
-| Waste Type | Conversion Rate | Output Material | Astronaut Benefit | Earth Impact |
-|------------|----------------|-----------------|-------------------|--------------|
-| **Plastic** | 50% | 3D Printer Filament | 5 Tools per kg | 20 Bottles Saved |
-| **Metal** | 70% | Metal Sheets | 1 Construction Part per kg | 2.5kg CO₂ Avoided |
-| **Textile** | 80% | Insulation Material | 1 Habitat Panel per kg | 2,700L Water Saved |
-| **E-Waste** | 30% | Metals + Syngas | 10 Energy Units per kg | 5 Electronics Recycled |
+Data Visualization & Education
 
-## 🎯 Mission Objectives
+Highlights
 
-### Mars Mission Mode
-- **Survival Focus**: Convert waste to essential tools and materials
-- **Resource Management**: Track inventory for long-term mission success
-- **Habitat Safety**: Monitor insulation and construction readiness
-- **Energy Security**: Ensure backup power through waste recycling
+Dual-mode (Mars survival + Earth impact)
 
-### Earth Impact Mode
-- **Environmental Awareness**: Show real-world recycling benefits
-- **Sustainability Education**: Demonstrate waste reduction impact
-- **Conservation Metrics**: Track water, emissions, and resource savings
-- **Educational Outreach**: Inspire environmental responsibility
+AI-powered waste classification
 
-## 🏆 NASA Space Apps Challenge
+Gamified survival metrics
 
-### Challenge Categories
-- **Space Technology Innovation**
-- **Sustainability & Environmental Impact**
-- **Educational Technology**
-- **Data Visualization & Analysis**
+Comprehensive data tracking
 
-### Innovation Highlights
-- **Dual-mode operation** for space and Earth applications
-- **Real-time AI simulation** for waste classification
-- **Comprehensive data tracking** with timeline analysis
-- **Gamified survival metrics** for engagement
-- **Professional-grade data export** for research
+📱 Mobile Ready
 
-## 🚀 Deployment
+Responsive UI for all devices
 
-The application is optimized for deployment on Lovable with:
-- **Automatic builds** from GitHub
-- **Integrated Supabase** backend
-- **Real-time preview** during development
-- **Mobile-responsive** design
+Touch-optimized controls
 
-### Custom Domain Support
-Configure your custom domain in Lovable settings for production deployment.
+PWA capabilities for offline use
 
-## 📱 Mobile Support
+🔒 Security
 
-- **Responsive design** works on all screen sizes
-- **Touch-optimized** interface for tablets
-- **Progressive Web App** capabilities
-- **Offline functionality** for core features
+Supabase RLS (Row Level Security)
 
-## 🔒 Security Features
+Input validation & sanitization
 
-- **Row Level Security** on all database tables
-- **Input validation** and sanitization
-- **Secure file upload** handling
-- **Error boundary** protection
-- **Type-safe** API interactions
+Secure file upload & error handling
 
-## 🤝 Contributing
+Type-safe API interactions
 
-### Development Setup
-1. Fork the repository
-2. Create feature branch: `git checkout -b feature/amazing-feature`
-3. Commit changes: `git commit -m 'Add amazing feature'`
-4. Push to branch: `git push origin feature/amazing-feature`
-5. Open Pull Request
+🤝 Contributing
 
-### Code Standards
-- **TypeScript** for type safety
-- **ESLint** for code quality
-- **Prettier** for formatting
-- **Semantic commits** for changelog
+Fork the repo
 
-## 📄 License
+Create a feature branch
 
-This project is created for the NASA Space Apps Challenge 2025 and is open source under the MIT License.
+Commit with semantic messages
 
-## 🎉 Acknowledgments
+Open a PR
 
-- **NASA Space Apps Challenge** for the inspiring challenge
-- **Space exploration community** for technical guidance
-- **Environmental sustainability experts** for impact calculations
-- **Open source community** for amazing tools and libraries
+Standards: TypeScript, ESLint, Prettier
 
----
+📄 License
 
-## 🚀 Ready to Transform Space Waste?
+MIT License – Open source for NASA Space Apps Challenge 2025.
 
-**[Launch Simulator →]
+🎉 Acknowledgments
 
-*Built with 💫 for astronauts and Earth's future*
+NASA Space Apps Challenge for the opportunity
 
----
+Space research & sustainability experts for inspiration
 
-### Team Contact
-- **Challenge**: NASA Space Apps Challenge 2025 Noida
-- **Category**: Space Technology & Sustainability
-- **Demo**: 
-- **Documentation**: [API Docs](./API_DOCUMENTATION.md)
+Open source community for amazing tools
+
+🌟 Demo & Resources
+
+GitHub Repo: SpaceTrash Mars
+
+Documentation: API Docs
