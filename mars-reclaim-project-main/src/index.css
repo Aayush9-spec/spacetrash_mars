@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SpaceTrash Recycling Simulator Design System - Mars Habitat Theme */
+
+@layer base {
+  :root {
+    /* Mars Surface Colors */
+    --mars-surface: 14 85% 8%;
+    --mars-dust: 22 84% 15%;
+    --mars-rock: 18 65% 25%;
+    --mars-sunset: 14 100% 45%;
+    --mars-glow: 25 100% 65%;
+    
+    /* Space Colors */
+    --space-void: 240 100% 3%;
+    --space-deep: 235 85% 8%;
+    --space-nebula: 250 75% 15%;
+    --cosmic-blue: 220 100% 60%;
+    --stellar-purple: 280 85% 55%;
+    
+    /* Habitat UI Colors */
+    --habitat-glass: 210 30% 95%;
+    --habitat-panel: 215 25% 90%;
+    --status-green: 140 100% 45%;
+    --warning-orange: 35 100% 55%;
+    --danger-red: 0 85% 55%;
+    
+    /* Core System Variables */
+    --background: var(--space-void);
+    --foreground: var(--habitat-glass);
+    
+    --card: var(--space-deep);
+    --card-foreground: var(--habitat-glass);
+    
+    --popover: var(--space-nebula);
+    --popover-foreground: var(--habitat-glass);
+    
+    --primary: var(--mars-sunset);
+    --primary-foreground: var(--space-void);
+    
+    --secondary: var(--space-nebula);
+    --secondary-foreground: var(--habitat-glass);
+    
+    --muted: var(--mars-dust);
+    --muted-foreground: var(--habitat-panel);
+    
+    --accent: var(--cosmic-blue);
+    --accent-foreground: var(--space-void);
+    
+    --destructive: var(--danger-red);
+    --destructive-foreground: var(--habitat-glass);
+    
+    --border: var(--mars-dust);
+    --input: var(--space-nebula);
+    --ring: var(--mars-glow);
+    
+    /* Design System Tokens */
+    --radius: 1rem;
+
+    
+    /* Gradients */
+    --gradient-mars: linear-gradient(135deg, hsl(var(--mars-surface)), hsl(var(--mars-sunset)));
+    --gradient-space: linear-gradient(180deg, hsl(var(--space-void)), hsl(var(--space-deep)));
+    --gradient-nebula: linear-gradient(45deg, hsl(var(--cosmic-blue)), hsl(var(--stellar-purple)));
+    --gradient-habitat: linear-gradient(135deg, hsl(var(--space-deep) / 0.8), hsl(var(--space-nebula) / 0.9));
+    
+    /* Shadows & Effects */
+    --shadow-mars: 0 20px 40px hsl(var(--mars-sunset) / 0.3);
+    --shadow-space: 0 10px 30px hsl(var(--space-void) / 0.8);
+    --shadow-glow: 0 0 30px hsl(var(--mars-glow) / 0.4);
+    --glass-bg: hsl(var(--space-deep) / 0.1);
+    --glass-border: hsl(var(--habitat-glass) / 0.2);
+    
+    /* Animations */
+    --transition-space: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-glow: all 0.3s ease-in-out;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-exo;
+    background: var(--gradient-space);
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-orbitron;
+  }
+}
+
+@layer components {
+  /* Glass morphism effects */
+  .glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-space);
+  }
+
+  .habitat-card {
+    @apply glass-panel rounded-2xl p-6;
+    transition: var(--transition-space);
+  }
+
+  .habitat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Mars themed buttons */
+  .btn-mars {
+    background: var(--gradient-mars);
+    @apply text-primary-foreground font-orbitron font-semibold px-6 py-3 rounded-xl;
+    box-shadow: var(--shadow-mars);
+    transition: var(--transition-glow);
+    border: 1px solid hsl(var(--mars-glow) / 0.3);
+  }
+
+  .btn-mars:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-glow), var(--shadow-mars);
+  }
+
+  .btn-space {
+    background: var(--gradient-nebula);
+    @apply text-accent-foreground font-orbitron font-semibold px-6 py-3 rounded-xl;
+    transition: var(--transition-glow);
+    border: 1px solid hsl(var(--cosmic-blue) / 0.3);
+  }
+
+  .btn-space:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0 20px hsl(var(--cosmic-blue) / 0.5);
+  }
+
+  /* Status indicators */
+  .status-good {
+    @apply bg-status-green/20 border-status-green/40 text-status-green;
+  }
+
+  .status-warning {
+    @apply bg-status-orange/20 border-status-orange/40 text-status-orange;
+  }
+
+  .status-danger {
+    @apply bg-status-red/20 border-status-red/40 text-status-red;
+  }
+
+  /* Animation keyframes */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% { box-shadow: 0 0 20px hsl(var(--mars-glow) / 0.3); }
+    50% { box-shadow: 0 0 40px hsl(var(--mars-glow) / 0.6); }
+  }
+
+  @keyframes stellar-rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
+
+  .animate-stellar {
+    animation: stellar-rotate 20s linear infinite;
+  }
+}
